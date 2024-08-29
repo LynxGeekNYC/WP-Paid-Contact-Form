@@ -13,3 +13,8 @@ Don’t forget to replace YOUR_PAYPAL_CLIENT_ID in the paid-contact-form.php fil
 
 3. Usage
 To use the form on any page or post, add the shortcode [paid_contact_form].
+
+# Was this script helpful to you? Please donate:
+
+CashApp / Venmo: LynxGeekNYC
+BitCoin: bc1q8sthd96c7chhq5kr3u80xrxs26jna9d8c0mjh7
