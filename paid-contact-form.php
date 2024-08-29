@@ -29,16 +29,16 @@ function paid_contact_form_shortcode() {
 
     ob_start(); ?>
     <form id="paid-contact-form" method="post" action="">
-        <label for="name">Name</label>
-        <input type="text" name="name" required>
-        <label for="email">Email</label>
-        <input type="email" name="email" required>
-        <label for="phone">Phone</label>
-        <input type="text" name="phone" required>
-        <label for="message">Message</label>
-        <textarea name="message" required></textarea>
+        <label for="name">Name</label><br>
+        <input type="text" name="name" required><br><br>
+        <label for="email">Email</label><br>
+        <input type="email" name="email" required><br><br>
+        <label for="phone">Phone</label><br>
+        <input type="text" name="phone" required><br><br>
+        <label for="message">Message</label><br>
+        <textarea name="message" required></textarea><br><br>
         <label for="captcha">What is <?php echo $num1; ?> + <?php echo $num2; ?>?</label>
-        <input type="text" name="captcha" required>
+        <input type="text" name="captcha" required><br><br>
         <input type="hidden" name="payment_status" id="payment_status" value="unpaid">
         <div id="paypal-button-container"></div>
         <button type="submit" id="submit-button" disabled>Send Message</button>
