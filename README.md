@@ -17,4 +17,5 @@ To use the form on any page or post, add the shortcode [paid_contact_form].
 # Was this script helpful to you? Please donate:
 
 CashApp / Venmo: LynxGeekNYC
+
 BitCoin: bc1q8sthd96c7chhq5kr3u80xrxs26jna9d8c0mjh7
