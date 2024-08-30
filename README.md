@@ -1,5 +1,9 @@
 # WP-Paid-Contact-Form
-I got tired of all the spam and stupid questions I receive via my websites contact form. Not to mention the spam. So created a simple contact form where people have to pay in order to submit a question.
+I got tired of all the spam and stupid questions I received via my website's contact form. Not to mention the spam. So created a simple contact form where people have to pay to submit a question.
+
+# PayPal
+This script requires a PayPal Business Account to work. The SDK will not go live unless your business account is activated. 
+
 
 1. Replace PayPal Client ID
 Don’t forget to replace YOUR_PAYPAL_CLIENT_ID in the paid-contact-form.php file with your actual PayPal Client ID.
@@ -15,6 +19,8 @@ Don’t forget to replace YOUR_PAYPAL_CLIENT_ID in the paid-contact-form.php fil
 To use the form on any page or post, add the shortcode [paid_contact_form].
 
 # Was this script helpful to you? Please donate:
+
+PayPal: alex@alexandermirvis.com
 
 CashApp / Venmo: LynxGeekNYC
 
