@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Paid Contact Form
-Description: A contact form that requires PayPal payment to submit, with CAPTCHA.
-Version: 1.1
-Author: Alexander Mirvis (Lynx)
+Description: A contact form that requires PayPal payment to be submitted. Is this script useful? Donate via PayPal: alex@alexandermirvisc.com or CashApp/Venmo: $LynxGeekNYC 
+Version: 1.2
+Author: Alexander Mirvis
 */
 
 if (!defined('ABSPATH')) {
@@ -29,16 +29,16 @@ function paid_contact_form_shortcode() {
 
     ob_start(); ?>
     <form id="paid-contact-form" method="post" action="">
-        <label for="name">Name</label><br>
-        <input type="text" name="name" required><br><br>
-        <label for="email">Email</label><br>
-        <input type="email" name="email" required><br><br>
-        <label for="phone">Phone</label><br>
-        <input type="text" name="phone" required><br><br>
-        <label for="message">Message</label><br>
-        <textarea name="message" required></textarea><br><br>
+        <label for="name">Name</label>
+        <input type="text" name="name" required>
+        <label for="email">Email</label>
+        <input type="email" name="email" required>
+        <label for="phone">Phone</label>
+        <input type="text" name="phone" required>
+        <label for="message">Message</label>
+        <textarea name="message" required></textarea>
         <label for="captcha">What is <?php echo $num1; ?> + <?php echo $num2; ?>?</label>
-        <input type="text" name="captcha" required><br><br>
+        <input type="text" name="captcha" required>
         <input type="hidden" name="payment_status" id="payment_status" value="unpaid">
         <div id="paypal-button-container"></div>
         <button type="submit" id="submit-button" disabled>Send Message</button>
@@ -62,6 +62,12 @@ function handle_paid_contact_form_submission() {
         $phone = sanitize_text_field($_POST['phone']);
         $message = sanitize_textarea_field($_POST['message']);
 
+        // Validate email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo '<p>Invalid email address. Please enter a valid email.</p>';
+            return;
+        }
+
         // Send the email
         $to = get_option('admin_email');
         $subject = 'New Contact Form Message';
@@ -70,7 +76,7 @@ function handle_paid_contact_form_submission() {
 
         wp_mail($to, $subject, $body, $headers);
 
-        echo '<p>Thank you for your message! I will get back to you soon.</p>';
+        echo '<p>Thank you for your message! We will get back to you soon.</p>';
     }
 }
 add_action('wp', 'handle_paid_contact_form_submission');
