@@ -30,15 +30,15 @@ function paid_contact_form_shortcode() {
     ob_start(); ?>
     <form id="paid-contact-form" method="post" action="">
         <label for="name">Name</label>
-        <input type="text" name="name" required>
+        <input type="text" name="name" required><br>
         <label for="email">Email</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required><br>
         <label for="phone">Phone</label>
-        <input type="text" name="phone" required>
+        <input type="text" name="phone" required><br>
         <label for="message">Message</label>
-        <textarea name="message" required></textarea>
+        <textarea name="message" required></textarea><br>
         <label for="captcha">What is <?php echo $num1; ?> + <?php echo $num2; ?>?</label>
-        <input type="text" name="captcha" required>
+        <input type="text" name="captcha" required><br>
         <input type="hidden" name="payment_status" id="payment_status" value="unpaid">
         <div id="paypal-button-container"></div>
         <button type="submit" id="submit-button" disabled>Send Message</button>
