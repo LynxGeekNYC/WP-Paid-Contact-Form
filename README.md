@@ -20,6 +20,8 @@ To use the form on any page or post, add the shortcode [paid_contact_form].
 
 # Was this script helpful to you? Please donate:
 
+I put a lot of work into these scripts so please donate if you can. Even $1 helps!
+
 PayPal: alex@alexandermirvis.com
 
 CashApp / Venmo: LynxGeekNYC
